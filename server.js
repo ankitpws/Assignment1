@@ -31,10 +31,7 @@ try {
 process.on("unhandledRejection", (error) => {
   console.log("unhandledRejection", error.message);
 });
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
-});
+
 app.use("/auth", userRoutes);
 app.use("/employee", employeeRoutes);
 app.use("/company", companyRoutes);
